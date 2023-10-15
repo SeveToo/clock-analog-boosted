@@ -1,0 +1,131 @@
+* {
+   margin: 0;
+   padding: 0;
+   /* background: #191919; */
+   font-family: 'Poppins', sans-serif;
+   color: white;
+}
+
+:root{
+   --main-color: lime;
+}
+
+body {
+   height: 100vh;
+   background: rgb(36, 36, 36);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h1 {
+   font-weight: 500;
+   font-size: 40px;
+}
+
+.container {
+   width: 700px;
+   height: 700px;
+   display: grid;
+   place-items: center;
+}
+
+.clock {
+   width: 500px;
+   height: 500px;
+   border: 8px solid var(--main-color);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   box-shadow: 0 0 20px 0px rgba(0,0,0,.4);
+}
+
+.clock::before {
+    content: "";
+    height: 17px;
+    width: 17px;
+    background: rgb(36, 36, 36);
+    box-shadow: 0 0 3px white,
+                0 0 3px var(--main-color);
+   transition: 1s;
+    border-radius: 20px;
+    z-index: 200;
+    overflow: hidden;
+}
+
+.hourPointer {
+   width: 500px;
+   height: 500px;
+   /* background: red; */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   border-radius: 3px;
+   transform: translate(-50%,-50%);
+   transition: 1s linear;
+}
+
+.hh {
+   width: 10px;
+   height: 150px;
+   background: var(--main-color);
+   transition: 1s;
+
+   position: absolute;
+   top: 200px;
+   left: 50%;
+   border-radius: 3px;
+   transform: translate(-50%,-50%);
+}
+
+
+.minutePointer { 
+   width: 500px;
+   height: 500px;
+   /* background: white; */
+   position: absolute;
+   border-radius: 3px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%) ;
+   z-index: 9;
+   /* transition: 1s linear; */
+}
+.mm {
+   width: 7px;
+   height: 177px;
+   background: white;
+   position: absolute;
+   border-radius: 3px;
+   top: 190px;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+
+ .secondPointer { 
+    width: 500px;
+    height: 500px;
+    /* background: white; */
+    position: absolute;
+    border-radius: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    z-index: 10;
+    transition: 1s linear;
+}
+
+.ss {
+    width: 5px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    border-radius: 3px;
+    transform: translate(-50%,-50%);
+}
+
